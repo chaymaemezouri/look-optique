@@ -1,0 +1,22 @@
+[
+    {
+        "file": "file.pdf",
+        "client_name": "MACALOU Kouta",
+        "client_number": "2 85 04 92 02 51 56 72"
+    },
+    {
+        "file": "file2.pdf",
+        "client_name": "MACALOU Kouta",
+        "client_number": "2 85 04 92 02 51 56 72"
+    },
+    {
+        "file": "ocr.pdf",
+        "client_name": "ADOUR Damia",
+        "client_number": "2 74 01 99 35 26 02 12"
+    },
+    {
+        "file": "ocr2.pdf",
+        "client_name": "ADOUR Damia",
+        "client_number": "2 74 01 99 35 26 02 12"
+    }
+]
