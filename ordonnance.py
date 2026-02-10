@@ -112,7 +112,7 @@ def process_pdf(pdf_path: str) -> dict:
 def save_all_to_json(data, output_file="ordonnances.json"):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-    print(f"✅ Données enregistrées dans : {output_file}")
+    print(f"Données enregistrées dans : {output_file}")
 
 
 # ============================
@@ -123,13 +123,13 @@ if __name__ == "__main__":
     ord_dir = base_dir / "ordonnances"
 
     if not ord_dir.exists():
-        raise FileNotFoundError(f"❌ Dossier introuvable: {ord_dir}")
+        raise FileNotFoundError(f" Dossier introuvable: {ord_dir}")
 
     # Tous les PDFs (même dans sous-dossiers)
     pdf_files = sorted(ord_dir.rglob("*.pdf"))
 
     if not pdf_files:
-        raise FileNotFoundError(f"❌ Aucun PDF trouvé dans: {ord_dir}")
+        raise FileNotFoundError(f" Aucun PDF trouvé dans: {ord_dir}")
 
     results = []
 
@@ -137,7 +137,6 @@ if __name__ == "__main__":
         result = process_pdf(str(pdf))
         results.append(result)
 
-        print("\n--- RESULT ---")
         print("Fichier:", result["file"])
         print("Nom:", (f"{result['title']} {result['full_name']}" if result["full_name"] else None))
         print("Naissance:", result["birthdate"])
